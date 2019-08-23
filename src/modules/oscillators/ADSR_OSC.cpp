@@ -13,8 +13,7 @@ pdsp::ADSR_OSC::ADSR_OSC()
   detuneFine.set(0);
 
   pitch + detuneCoarse + detuneFine >> osc.in_pitch();
-  //pitch  >> osc.in_pitch();
-
+  
   waveForm.resize(4);
   osc.out_sine() >> waveForm.input(0);
   osc.out_triangle() >> waveForm.input(1);
