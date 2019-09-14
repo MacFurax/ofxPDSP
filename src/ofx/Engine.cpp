@@ -129,7 +129,7 @@ void pdsp::Engine::setup( int sampleRate, int bufferSize, int nBuffers){
  
     ofAddListener( ofEvents().exit, this, &pdsp::Engine::onExit );
     
-    ofLogNotice()<<"[pdsp] engine: starting with parameters: buffer size = "<<bufferSize<<" | sample rate = "<<sampleRate<<" | "<<inputChannels<<" inputs | "<<outputChannels<<" outputs\n";
+    ofLogNotice()<<"[pdsp] engine: starting with parameters: buffer size = "<<bufferSize<<" | sample rate = "<<sampleRate<<" | "<<inputChannels<<" inputs | "<<outputChannels<<" outputs";
    
     if ( nBuffers < 1 ) nBuffers = 1;
     
@@ -259,7 +259,7 @@ void pdsp::Engine::setup( int sampleRate, int bufferSize, int nBuffers){
     state = startedState;
 
     #ifndef TARGET_OF_IOS
-    ofLogNotice()<<"[pdsp] engine: started | buffer size = "<<outputStream.getBufferSize()<<" | sample rate = "<<outputStream.getSampleRate()<<" | "<<outputStream.getNumInputChannels()<<" inputs | "<<outputStream.getNumOutputChannels()<<" outputs\n";
+    ofLogNotice()<<"[pdsp] engine: started | buffer size = "<<outputStream.getBufferSize()<<" | sample rate = "<<outputStream.getSampleRate()<<" | "<<outputStream.getNumInputChannels()<<" inputs | "<<outputStream.getNumOutputChannels()<<" outputs";
     #endif
     
 }
